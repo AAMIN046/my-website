@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>My First Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg,#74ebd5,#9face6);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .card{
+      background:#fff;
+      padding:25px;
+      border-radius:12px;
+      width:100%;
+      max-width:380px;
+      text-align:center;
+      box-shadow:0 15px 30px rgba(0,0,0,0.2);
+      animation: pop 0.6s ease;
+    }
+    @keyframes pop{
+      from{transform:scale(0.8);opacity:0;}
+      to{transform:scale(1);opacity:1;}
+    }
+    h1{color:#2c3e50;}
+    h2{color:#27ae60;}
+    p{color:#555;font-size:15px;}
+    input{
+      width:80%;
+      padding:10px;
+      margin-top:10px;
+      border-radius:6px;
+      border:1px solid #ccc;
+    }
+    button{
+      margin-top:15px;
+      padding:12px 18px;
+      background:#27ae60;
+      color:#fff;
+      border:none;
+      border-radius:6px;
+      font-size:16px;
+    }
+    button:active{
+      transform:scale(0.95);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Welcome</h1>
+    <h2>আমি হলাম — MR.AAMIN</h2>
+    <img src="photo.jpg" width="120" style="border-radius:50%;margin:10px 0;">
+
+    <p>
+      আমি medicine wholesaler staff হিসেবে কাজ করি।  
+      এখন web development শিখছি।
+    </p>
+
+    <!-- Input + Button + Output -->
+    <input type="text" id="nameInput" placeholder="তোমার নাম লিখো">
+    <br><br>
+    <button onclick="sayHello()">Submit</button>
+   <a href="https://wa.me/918101194046" target="_blank">
+  <button style="background:#25D366;">
+    WhatsApp এ কথা বলো
+  </button>
+</a>
+    <p id="output"></p>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function sayHello(){
+      let name = document.getElementById("nameInput").value;
+
+      if(name === ""){
+        alert("নাম লেখো আগে 🙂");
+      }else{
+        document.getElementById("output").innerHTML = 
+        "স্বাগতম " + name + " 💚 তুমি web development শিখছো!";
+      }
+    }
+  </script>
+
+</body>
+</html>
