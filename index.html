@@ -58,6 +58,72 @@
   <div class="card">
     <h1>Welcome</h1>
     <h2>আমি হলাম — MR. AAMIN</h2>
+
+    <p><b>Simple Website Designer</b></p>
+
+    <p>
+    আমি simple ও সুন্দর website বানিয়ে দেই  
+    medical store, personal profile ও ছোট business এর জন্য।  
+    কম খরচে, WhatsApp সহ website তৈরি করি।
+    </p>
+
+    <!-- Input + Button + Output -->
+    <input type="text" id="nameInput" placeholder="তোমার নাম লিখো">
+    <br><br>
+    <button onclick="sayHello()">Submit</button>
+
+    <p style="font-size:14px;color:#888;">
+    Website লাগলে নিচের WhatsApp বাটনে যোগাযোগ করুন
+    </p> 
+
+    <a href="https://wa.me/918101194046" target="_blank">
+      <button style="background:#25D366;">
+        WhatsApp এ কথা বলো
+      </button>
+    </a>
+
+    <p id="output"></p>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function sayHello(){
+      let name = document.getElementById("nameInput").value;
+
+      if(name === ""){
+        alert("নাম লেখো আগে 🙂");
+      }else{
+        document.getElementById("output").innerHTML = 
+        "স্বাগতম " + name + " 💚 তুমি web development শিখছো! 🎉<br>এখন তুমি নিজের website বানাতে পারো এবং ছোট কাজ থেকে আয় শুরু করতে পারো 💰";
+      }
+    }
+  </script>
+
+</body>
+</html>      margin-top:10px;
+      border-radius:6px;
+      border:1px solid #ccc;
+    }
+    button{
+      margin-top:15px;
+      padding:12px 18px;
+      background:#27ae60;
+      color:#fff;
+      border:none;
+      border-radius:6px;
+      font-size:16px;
+    }
+    button:active{
+      transform:scale(0.95);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Welcome</h1>
+    <h2>আমি হলাম — MR. AAMIN</h2>
 <p><b>Simple Website Designer</b></p>
 
 <p>
