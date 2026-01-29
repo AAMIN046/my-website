@@ -47,11 +47,10 @@
       border:none;
       border-radius:6px;
       font-size:16px;
-      cursor:pointer;
     }
-    button:hover{opacity:0.9;}
-    button:active{transform:scale(0.95);}
-
+    button:active{
+      transform:scale(0.95);
+    }
     .profile{
       width:120px;
       height:120px;
@@ -61,8 +60,6 @@
       display:block;
       border:3px solid #27ae60;
     }
-
-    /* Floating WhatsApp Button */
     .whatsapp-float{
       position: fixed;
       bottom: 20px;
@@ -105,7 +102,7 @@
     <li>✔️ Free Hosting Setup</li>
   </ul>
 
-  <p style="color:#27ae60;">Website শুরু মাত্র ₹999 থেকে</p>
+  <p style="color:#27ae60;font-size:14px;">Website শুরু মাত্র ₹999 থেকে</p>
   <p style="font-weight:bold;">আজই আপনার business online করুন 🚀</p>
 
   <hr>
@@ -143,25 +140,20 @@
   </ul>
 
   <p><b>Client Feedback ⭐</b></p>
-  <p style="font-style:italic;">
+  <p style="font-style:italic;font-size:14px;">
     “খুব সুন্দর ও clean website বানিয়ে দিয়েছে।  
-    WhatsApp button কাজ করছে, mobile এ perfect।”
+    WhatsApp button কাজ করছে, mobile এ একদম perfect।”
   </p>
   <p style="font-size:13px;color:#888;">— Local Business Owner</p>
 
   <input type="text" id="nameInput" placeholder="তোমার নাম লিখো">
   <br><br>
   <button onclick="sayHello()">Submit</button>
-
   <p id="output"></p>
 
-  <p style="font-size:13px;">
+  <p style="font-size:13px;color:#777;">
     🔒 100% Safe • No Advance • Local Support
   </p>
-
-  <a href="https://wa.me/918101194046" target="_blank">
-    <button style="background:#25D366;">WhatsApp এ কথা বলো</button>
-  </a>
 
   <hr>
   <p style="font-size:12px;color:#999;">
@@ -169,16 +161,19 @@
   </p>
 </div>
 
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/918101194046" class="whatsapp-float" target="_blank">
+<a class="whatsapp-float"
+   href="https://wa.me/918101194046?text=Hi%20Aamin,%20আমি%20website%20বানাতে%20চাই"
+   target="_blank">
 💬 WhatsApp
 </a>
 
 <script>
 function autoGreeting(){
-  let h = new Date().getHours();
-  let g = h < 12 ? "🌞 Good Morning!" : h < 18 ? "🌤️ Good Afternoon!" : "🌙 Good Evening!";
-  document.getElementById("greeting").innerHTML = g;
+  let hour = new Date().getHours();
+  let greet = hour < 12 ? "🌞 Good Morning!" :
+              hour < 18 ? "🌤️ Good Afternoon!" :
+              "🌙 Good Evening!";
+  document.getElementById("greeting").innerHTML = greet;
 }
 autoGreeting();
 
@@ -188,7 +183,7 @@ function sayHello(){
     alert("নাম লেখো আগে 🙂");
   }else{
     document.getElementById("output").innerHTML =
-    "স্বাগতম " + name + " 💚<br>এখন তুমি নিজের website বানিয়ে আয় শুরু করতে পারো 💰";
+    "স্বাগতম "+name+" 💚<br>এখন তুমি নিজের website বানাতে পারো!";
   }
 }
 </script>
